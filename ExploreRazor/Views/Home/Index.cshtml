@@ -2,30 +2,83 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+  @*
+    @{
+        var num1 = 5;
+        var num2 = 10;
+        var result = num1 + num2;
+    }
+    <h5>Sum of @num1 + @num2 = @result</h5>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+
+    @{var message = "I am Single Line Statements";}
+    <h5>The message is : @message</h5>
+
+    @{ 
+        string msg1 = "Hello";
+        int num = 5;
+        var result = num + msg1;
+        <h1>@result</h1>
+
+    }
+
+    @{ 
+        string name = "Danny";
+        int age = 28;
+    }
+    <h1>Hello @name! You are @age years old.</h1>
+
+    @{ 
+        int num1 = 8;
+        int num2 = 5;
+        int sum = num1 + num2;
+     }
+    <h1>@num1 plus @num2 equals @sum</h1> 
+
+    @{ 
+        var num1 = "200";
+        var num2 = "300";
+        num1.IsInt();
+        num2.IsInt();
+
+        int sum = num1 + num2;
+    }
+    <h1>@sum</h1> Didn't work properly, still needs work on "int sum =" line 
+
+    @{ 
+        int num = 5;
+    }
+
+    <h1>@num is actuuuuaaaally @{num++;} : @num</h1> *@
+
+    @{ 
+        var number = "32";
+        int num;
+
+        if(number.IsInt()==true)
+        {
+            num = number.AsInt();
+            <h5>@num is Interger Value</h5>
+        }
+
+        var v = "3.14";
+        float f;
+        if(v.IsFloat() ==true)
+        {
+            f = v.AsFloat();
+            <h5>@f</h5>
+        }
+
+    }
+
+</body>
+</html>
+
+
+
